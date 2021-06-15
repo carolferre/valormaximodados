@@ -1,0 +1,17 @@
+import random
+contador=0
+miLista=[]
+print("Introduzca el número de dados")
+dados=int(input())
+if dados<=0:
+    print("¡Imposible!")
+    exit()
+def dadomasAlto(dados,random,contador):
+    while(contador!=dados):
+        tiradas=random.randint(1,6)
+        miLista.append(tiradas)
+        contador+=1
+    print(miLista)
+    print("El valor máximo es ",max(miLista))
+
+dadomasAlto(dados,random,contador)
